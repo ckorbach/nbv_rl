@@ -1,0 +1,10 @@
+model:
+  path: "/data/models/classifier"
+  model: "pybullet_dataset_distractors_no_arm.model"
+  class_map: "class_map_distractors.json"
+  net: "basicnet"
+  activation: "softmax"  # softmax, sigmoid or None
+  resize_size: 224
+
+  ignore_robot: True  # sets shift_arm = True, if True
+  shift_arm: True

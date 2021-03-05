@@ -1,0 +1,286 @@
+system:
+  root_path: /home/ckorbach
+  project_path: /home/ckorbach/nbv/next_best_view_rl
+robot:
+  name: j2s7s300
+  urdf_path: /third_party/kinova-ros/kinova_description/urdf/j2s7s300.urdf
+  end_effector_index: 9
+  finger_index:
+  - 10
+  - 12
+  - 14
+  finger_tip_index:
+  - 11
+  - 13
+  - 15
+  origin_pos:
+  - 0
+  - 0
+  - 0
+  origin_orientation:
+  - 0
+  - 0
+  - 1.5708
+  - 1
+  jd:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  ll:
+  - 0.0
+  - 0.0
+  - -6.28318530718
+  - 0.820304748437
+  - -6.28318530718
+  - 0.523598775598
+  - -6.28318530718
+  - 1.1344640138
+  - -6.28318530718
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  ul:
+  - 0.0
+  - 0.0
+  - 6.28318530718
+  - 5.46288055874
+  - 6.28318530718
+  - 5.75958653158
+  - 6.28318530718
+  - 5.14872129338
+  - 6.28318530718
+  - 0.0
+  - 1.4
+  - 1.4
+  - 1.4
+  - 2.0
+  - 2.0
+  - 2.0
+  jr:
+  - 0.0
+  - 0.0
+  - 12.5
+  - 6.2
+  - 12.5
+  - 6.2
+  - 12.5
+  - 6.2
+  - 12.5
+  - 0.0
+  - 1.4
+  - 1.4
+  - 1.4
+  - 2.0
+  - 2.0
+  - 2.0
+  rp:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  hp:
+  - 0.0
+  - 0.0
+  - 4.942756675734287
+  - 2.8425018199945913
+  - 6.28153095151043
+  - 0.7585823283282497
+  - 4.635306978425654
+  - 4.497016479868892
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+camera:
+  name: zedm
+  model: /third_party/zed-ros-wrapper/zed_wrapper/urdf/zedm.urdf
+  cameraEyePosition:
+  - 0
+  - 0.27
+  - 0.55
+  cameraTargetPosition:
+  - 1
+  - 0.27
+  - 0.55
+  cameraUpVector:
+  - 0
+  - 0
+  - 1
+  fov: 54.43
+  aspect: 1.0
+  nearVal: 0.01
+  farVal: 2.0
+  w: 720
+  h: 720
+  focal: 700
+objects:
+  mesh_scale:
+  - 0.001
+  - 0.001
+  - 0.001
+  data_path: /data/objects
+  texture_path: /data/objects/texture.png
+  use_texture: false
+gym:
+  name: nextbestview-v0
+  seed: null
+  pos_lower_bounds:
+  - 0.4
+  - -0.05
+  - -0.05
+  pos_upper_bounds:
+  - 0.8
+  - 0.05
+  - 0.05
+  orn_lower_bounds:
+  - -1
+  - -1
+  - -1
+  - -1
+  orn_upper_bounds:
+  - 1
+  - 1
+  - 1
+  - 1
+  random_start_pose: true
+  start_pose: None
+  orientation:
+  - 0
+  - 0
+  - 0
+  - 0
+  save_best_images: false
+  save_all_images: false
+  save_init_images: false
+  print_epochs: true
+  print_level: 0
+log:
+  path: .log
+simulation:
+  gui_client: false
+  use_real_time_simulation: 0
+  gravity: 0.0
+  predict: true
+algorithm:
+  name: SAC
+  policy: LnMlp
+  learning_rate: 0.0003
+  buffer_size: 1000000
+  batch_size: 256
+  target_update_interval: 1
+  learning_starts: null
+  ent_coef: auto
+  verbose: 0
+  max_seed: 1000000
+  n_cpu_tf_sess: null
+model:
+  path: /data/models/classifier
+  model: yad_objects_random_basicnet_112.model
+  class_map: class_map_objects.json
+  net: basicnet
+  activation: softmax
+  resize_size: 224
+  ignore_robot: true
+  shift_arm: true
+train:
+  steps_per_episode: 100
+  episodes: 9000
+  max_steps: null
+  ds_obj_mode: 0
+  ds_sort_mode: 0
+  custom_objs: null
+  episodes_per_object: 1
+  model_path: null
+  val_num: 180
+evaluate:
+  steps_per_episode: 100
+  ds_obj_mode: 0
+  ds_sort_mode: 0
+  objects:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  n_eval_episodes: 10
+  model_path: /home/ckorbach/nbv/data/iros/group_id_p1/p1_0/tensorboard/SAC_arm=True_mode-0-0_10steps_88201.zip
+  process_data: true
+simulate:
+  obj_id: 0
+  obj_orn:
+  - 0
+  - 0
+  - 0
+  - 0
+classificator:
+  seed: 0
+  epochs: 200
+  net: basicnet
+  activation: null
+  batch_size: 32
+  resize_size: 224
+  classes: 18
+  feature_extract: true
+  use_pretrained: false
+  dataset_path: /home/ckorbach/nbv/data/yab_robot_complete_splitted
+  model_path: /home/ckorbach/nbv/next_best_view_rl/data/models
+  model_name: yab_robot_basicnet_complete
+  custom_pre_model: null
+  test_path: /home/ckorbach/nbv/data/datasets/yad_objects_random_splitted/test
+  test_model_path: /home/ckorbach/nbv/next_best_view_rl/data/models/classifier
+  test_model: yad_objects_random_basicnet_112.model
+  class_map: class_map_objects.json
+  file_type: .png
+  normalize_cm: true
+  modes:
+  - umap
+  - tsne
+  legend: true
+  size: 30
+  color_map: tab20

@@ -1,0 +1,7 @@
+README.md
+setup.py
+next_best_view.egg-info/PKG-INFO
+next_best_view.egg-info/SOURCES.txt
+next_best_view.egg-info/dependency_links.txt
+next_best_view.egg-info/requires.txt
+next_best_view.egg-info/top_level.txt

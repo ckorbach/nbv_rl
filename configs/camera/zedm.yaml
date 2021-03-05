@@ -1,0 +1,14 @@
+camera:
+  name: "zedm"
+  model: "/third_party/zed-ros-wrapper/zed_wrapper/urdf/zedm.urdf"
+  cameraEyePosition: [0, 0.27, 0.55]
+  cameraTargetPosition: [1, 0.27, 0.55]
+  cameraUpVector: [0, 0, 1]
+  fov: 54.43  # 2 * arctan(pixelNumber/(2*focalLength)) * (180/pi)
+  aspect: 1.0  # w / h
+  nearVal: 0.01
+  farVal: 2.0
+
+  w: 720
+  h: 720
+  focal: 700

@@ -1,0 +1,21 @@
+evaluate:
+  # gym
+  steps_per_episode: 10
+#  train_mode: 0  # 0: single object,
+#                 # 1: multi objects (sorted)
+#                 # 2: multi_objects (random)
+#
+  ds_obj_mode: 0  # 0: objects
+                  # 1: distractors
+                  # 2: complete
+  ds_sort_mode: 0  # 0: sorted, ascending
+                  # 1: sorted, descending
+                  # 2: sorted, custom
+                  # 3: random
+
+  # evaluation
+  objects: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  n_eval_episodes: 1000
+  model_path: "/home/ckorbach/nbv/data/iros/group_id_p1/p1_0/tensorboard/SAC_arm=True_mode-0-0_10steps_88201.zip"
+  #model_path: "/home/ckorbach/nbv/data/iros/group_id_p1/p1_0/p1_0_final.zip"
+  process_data: True

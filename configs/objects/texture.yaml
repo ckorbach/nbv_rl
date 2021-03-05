@@ -1,0 +1,5 @@
+objects:
+  mesh_scale: [1, 1, 1]
+  data_path: "/data/objects"
+  texture_path: "/data/objects/texture.png"
+  use_texture: True

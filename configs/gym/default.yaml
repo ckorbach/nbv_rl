@@ -1,0 +1,27 @@
+gym:
+  name: "nextbestview-v0"
+  seed: ~  # None = random [0, max_seed]
+
+  # boundaries
+  pos_lower_bounds: [0.4, -0.05, -0.05]
+  pos_upper_bounds: [0.8, 0.05, 0.05]
+  orn_lower_bounds: [-1, -1, -1, -1]
+  orn_upper_bounds: [1, 1, 1, 1]
+
+
+  # object positioning
+  random_start_pose: True
+  start_pose: None
+  orientation: [0, 0, 0, 0]
+
+  # images
+  save_best_images: False
+  save_all_images: False
+  save_init_images: False
+
+  # debug
+  print_epochs: True
+  print_level: 0  # 0: train
+                  # 1: debug
+                  # 2: verbose
+                  # TODO

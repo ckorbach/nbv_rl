@@ -1,0 +1,13 @@
+evaluate:
+  # gym
+  steps_per_episode: 2
+  train_mode: 0  # 0: single object,
+                 # 1: multi objects (sorted)
+                 # 2: multi_objects (random)
+
+  # evaluation
+  objects: [0]
+  n_eval_episodes: 50
+  model_path: None
+
+  process_data: True

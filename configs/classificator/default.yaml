@@ -1,0 +1,36 @@
+classificator:
+  seed: 0
+
+  epochs: 200
+  net: "basicnet"
+  activation: ~
+  batch_size: 32
+  resize_size: 224
+  classes: 18  # TODO remove?
+
+  feature_extract: True
+  use_pretrained: False
+
+  dataset_path: "/home/ckorbach/nbv/data/yab_robot_complete_splitted"
+  model_path: "/home/ckorbach/nbv/next_best_view_rl/data/models"
+  model_name: "yab_robot_basicnet_complete"
+  custom_pre_model: ~  # Path to pretrained model
+
+  # evaluation
+  #test_path : "/home/ckorbach/nbv/data/datasets/yad_objects_random_splitted/test"
+  test_path : "/home/ckorbach/nbv/data/datasets/yad_robot_objects_splitted/test"
+  test_model_path: "/home/ckorbach/nbv/next_best_view_rl/data/models/classifier"
+  #test_model: "yad_objects_random_basicnet_112.model"
+  test_model: "yad_robot_basicnet_objects_111.model"
+  class_map: "class_map_objects.json"
+
+  file_type: ".png"
+  # confusion matrix
+  normalize_cm: True
+
+  # plot embedding
+  modes: ["umap", "tsne"]
+  legend: True
+  size: 30
+  color_map: "tab20"
+

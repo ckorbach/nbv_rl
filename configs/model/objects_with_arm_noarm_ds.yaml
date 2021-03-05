@@ -1,0 +1,11 @@
+model:
+  path: "/data/models/classifier"
+  model: "yad_objects_random_basicnet_112.model"
+  class_map: "class_map_objects.json"
+  net: "basicnet"
+  activation: "softmax"  # softmax, sigmoid or None
+  resize_size: 224
+
+  ignore_robot: False  # sets shift_arm = True, if True
+  shift_arm: False
+

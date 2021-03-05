@@ -1,0 +1,12 @@
+evaluate:
+  # gym
+  steps_per_episode: 10
+  train_mode: 0  # 0: single object,
+                 # 1: multi objects (sorted)
+                 # 2: multi_objects (random)
+
+  # evaluation
+  objects: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
+  n_eval_episodes: 100
+  model_path: "/home/ckorbach/nbv/next_best_view_rl/data/data_log/train/SAC_mode1_robot_objects_10s_72000e_premodel_20/SAC_mode1_720000.zip"
+  process_data: True

@@ -1,0 +1,12 @@
+algorithm:
+  name: "SAC"
+  policy: "LnMlp"
+  learning_rate: 0.0003
+  buffer_size: 1000000
+  batch_size: 256
+  target_update_interval: 1
+  learning_starts: ~  # if None: after one episode of each object
+  ent_coef: "auto"
+  verbose: 0
+  max_seed: 1000000
+  n_cpu_tf_sess: ~ # 1 for deterministic results

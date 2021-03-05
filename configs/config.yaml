@@ -1,0 +1,16 @@
+defaults:
+  - system: default  # TODO automatize
+  - robot: j2s7s300
+  - camera: zedm
+  - objects: no_texture
+  - gym: default
+  - log: default
+  - simulation: no_gui
+  - algorithm: sac
+
+  - model: objects_no_arm
+  - train: objects_sorted_asc
+  - evaluate: objects
+  - simulate: default
+
+  - classificator: default
